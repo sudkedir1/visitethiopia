@@ -1,0 +1,529 @@
+:root{
+    --bg-color:orange;
+    --text-color:white;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.header{
+    display: grid;
+    grid-template-columns: 25rem auto;
+    background-color: black;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    
+}
+.logoContainer{
+    display: flex;
+    flex-direction: row;
+    color: var(--text-color);
+    align-items: center;
+    margin-left: 2em;
+    gap: 10px;
+      font-size: 2rem;
+    font-weight: 700;
+    font-variant:small-caps;
+}
+
+.logoImage img{
+    width: 3rem;
+    height: 2rem;
+    border-radius: 10px;
+    vertical-align: center;
+}
+
+.menuBar{
+  display: flex;
+    justify-content: end;
+    color: white;
+}
+
+.menuBar ul {
+list-style: none;
+
+}
+.menuBar ul li{
+    display: inline-flex;
+ margin: 0.5rem 1rem;
+text-decoration: none;
+color: rgb(243, 242, 242);
+}
+.menuBarcontainer ul li a{
+   text-decoration: none;
+    font-size: 1.3rem;
+    font-variant:small-caps ;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--text-color);
+    &:hover{
+        color: var(--bg-color);
+        background-color: rgb(95, 78, 48);
+    }
+}
+
+.toggleButton{
+    display: none;
+}
+
+
+.toggleButton span{
+    width: 2rem;
+    border: 1px solid white;
+    display: block;
+    margin: 0.25rem;
+    
+}
+
+
+
+
+.content{
+    min-height: 90vh;
+    background-image:linear-gradient(35deg, grey , transparent)   , url("../image/photo_3_2026-10-21_10-55-23.jpg");
+    background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+
+}
+
+.orange{
+    color:orange;
+}
+.content .mainContent{
+    padding-top:  10rem;
+    padding-left: 5rem;
+}
+.content .mainContent .main{
+    color: var(--text-color);
+      font-size: 3rem;
+    font-weight: 700;
+    font-variant:small-caps;
+}
+.getBtn button{
+    font-size: 2rem;
+    padding: 5px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    margin-left: 45rem;
+    margin-top: 2rem;
+  
+}
+
+.adventtit{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.places{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 50px;
+    background-color: black;
+    
+
+}
+
+.adventurecard {
+    text-align: center;
+    background-color: rgb(48, 48, 39);
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: .2s ease-in;
+    
+}
+
+.adventurecard:hover{
+    transform: translatey(-20px);
+    border: 2px solid orange;
+}
+
+.adventurecard img{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    
+
+}
+
+.adventurecard p{
+    line-height: 1.9em;
+    padding: 30px;
+    font-size: 
+    1.5em;
+    
+}
+
+.adventurecard h1{
+    color: orange;
+    font-weight: 700;
+    
+}
+.adventurecard a{
+    font-size: 1.3rem;
+    border-radius: 20px;
+    padding: 15px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: fit-content;
+    justify-self: center;
+    color: orange;
+    background-color: rgb(92, 85, 85);
+}
+
+.adventurecard a:hover{
+    background-color: rgb(243, 83, 25);
+    color: black;
+}
+
+
+.popularPackagesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color:rgb(242, 108, 59);
+}
+
+
+.popularPackages {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.popularPackages a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+
+.popularPackagesContainer .adventureBoxContainer {
+    background-color: #222a32;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 0 1.5rem;
+    gap: 1.5rem;
+
+    min-height: 600px;
+    height: 100%;
+
+    transition: background-color 180ms ease,
+                transform 180ms ease,
+                border-color 180ms ease;
+}
+
+.popularPackagesContainer .adventureBoxContainer:hover {
+    background-color: #29343d;
+    border: 1px solid orange;
+    transform: translateY(-5px);
+}
+
+
+.packagesImage {
+    width: 100%;
+    height: 230px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.packagesImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 300ms ease;
+}
+
+
+.popularPackagesContainer .adventureBoxContainer:hover .packagesImage img {
+    transform: scale(1.05);
+}
+
+
+.popularPackagesContainer .adventurTitleContainer {
+    color: var(--btn-color);
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.popularPackagesContainer .adventurTitleContainer h1 {
+    font-size: 1.3rem;
+}
+
+
+.popularPackagesContainer .adventureParagraphContainer {
+    padding: 0 1.2rem;
+    flex-grow: 1;
+}
+
+.popularPackagesContainer .adventureParagraphContainer p {
+    color: #959191;
+    word-spacing: 0.1rem;
+    font-weight: lighter;
+    line-height: 1.6;
+}
+
+
+.popularPackagesContainer .adventureBoxContainer > div:not(.packagesImage) {
+    width: 100%;
+}
+
+.contact {
+    background-color: #1c2023;
+    padding: 2rem 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.contact form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.input-container input {
+    width: 100%;
+    height: 48px;
+    padding: 0.75rem 1rem;
+    background-color: #272e34;
+    border: 1px solid #414950;
+    border-radius: 9px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-container input::placeholder,
+.contact textarea::placeholder {
+    color: #b0c4de;
+    opacity: 1;
+}
+
+.input-container input:focus,
+.contact textarea:focus {
+    border-color: orange;
+}
+
+.contact textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    background-color: #272e34;
+    border: 1px solid #414950;
+    border-radius: 9px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    resize: both;
+}
+
+.contact button {
+    padding: 0.8rem 1.8rem;
+    background-color: #e7aa49;
+    color: #171a1d;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 180ms ease;
+}
+
+.contact button:hover {
+    background-color: #f0b95b;
+}
+
+.footer {
+    background-color: #171b1e;
+    color: #c6d5e8;
+    border-top: 1px solid #303438;
+    padding: 5rem 0 1rem;
+    font-family: Arial, sans-serif;
+}
+
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    width: 78%;
+    margin: 0 auto;
+}
+
+
+.footerColumn h3 {
+    color: #e7a63e;
+    font-size: .9rem;
+    text-decoration: underline;
+    margin-bottom: 1.8rem;
+}
+
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.footerColumn ul li {
+    margin-bottom: 1.3rem;
+}
+
+
+.footerColumn ul li a {
+    color: #c6d5e8;
+    text-decoration: none;
+    font-size: .9rem;
+}
+.footerColumn ul li a:hover {
+    color: #e7a63e;
+}
+
+
+.footerBottom {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.footerAddress {
+    margin-bottom: 2.3rem;
+}
+
+
+.footerCopyright {
+    margin-bottom: 0;
+}
+
+.footerCopyright sup {
+    font-size: 0.7em;
+}
+
+@media (max-width: 630px) {
+    .toggleButton{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0rem;
+    }
+    .subMenuBar{
+        display: none;
+    }
+    .menuBar:hover .subMenuBar{
+        display: block;
+
+    }
+   .menuBar:hover .subMenuBar{
+    display: block;
+    /* flex-direction: column; */
+    position: absolute;
+    right: 0rem;
+    background-color: black;
+   }
+   .menuBar:hover ul{
+    display: flex;
+    flex-direction: column;
+   }
+   .menuBar:hover ul li a{
+text-decoration: none;
+    color: rgb(253, 248, 247);
+   }
+
+   .places {
+  display: grid;
+  /* Auto-fits columns; stacks automatically on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.adventurecard {
+  background: #313030;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popularPackagesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.popularPackages {
+  grid-column: 1 / -1; /* Spans all columns at the top */
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+
+.main{
+    width: 100%;
+    
+}
+
+
+
+}
+
+
+
